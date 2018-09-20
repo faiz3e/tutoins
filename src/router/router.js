@@ -7,6 +7,15 @@ import PublicAbout from "../components/publicRoutes/PublicAbout";
 import PrivateAbout from "../components/privateRoutes/PrivateAbout";
 import PrivateHome from "../components/privateRoutes/PrivateHome";
 
+import Packages from "../components/privateRoutes/container/Packages";
+import Performances from "../components/privateRoutes/container/Performances";
+import Profile from "../components/privateRoutes/container/Profile";
+import Results from "../components/privateRoutes/container/Results";
+import Review from "../components/privateRoutes/container/Review";
+import Syllabus from "../components/privateRoutes/container/Syllabus";
+
+
+
 class ReactRouter extends React.Component {
   render() {
     return (
@@ -21,7 +30,13 @@ class ReactRouter extends React.Component {
 
         {/* PRIVATE ROUTES */}
         <PrivateRoutes path="/privateHome" component={PrivateHome} />
-        <PrivateRoutes path="/privateAbout" component={PrivateAbout} />
+        <PrivateRoutes path="/Packages" component={Packages} />
+        <PrivateRoutes path="/Performances" component={Performances} />
+        <PrivateRoutes path="/Results" component={Results} />
+        <PrivateRoutes path="/Review" component={Review} />
+        <PrivateRoutes path="/Profile" component={Profile} />
+        <PrivateRoutes path="/Syllabus" component={Syllabus} />
+
         {/* any wrong routes */}
         {/* <Route path="/*" render={() => (<Redirect to="/publicHome" />)} /> */}
       </React.Fragment>
